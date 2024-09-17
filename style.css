@@ -1,3 +1,60 @@
-h1 {
-    background-color: blueviolet;
+:root{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.calcBody {
+display:flex;
+flex-direction: column;
+width: 50vw;
+height: 50vh;
+}
+
+.display{
+background-color: white;
+}
+
+.bottom{
+display: flex;
+flex-grow: 1;
+}
+
+.bottomLeft{
+display: flex;
+flex-direction: column;
+flex-grow: 1;
+}
+
+.bottomLeftTop{
+display: flex;
+
+}
+
+.clearButton{
+    flex-grow:1;
+}
+
+.bottomLeftBottom{
+display:flex;
+flex-wrap:wrap;
+}
+
+.numberButton{
+    flex-grow: 1;
+}
+
+.bottomRight{
+    display:flex;
+    flex-direction: column;
+}
+
+.mathButton{
+    display:flex;
+    flex-grow:1;
+}
+
+.solveButton{
+    display:flex;
+    flex-grow: 2;
 }
