@@ -1,18 +1,28 @@
-:root{
+:root   {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+}
+body {
+    display:flex;
+    justify-content: center;
 }
 
 .calcBody {
 display:flex;
 flex-direction: column;
-width: 50vw;
+width: 25vw;
 height: 50vh;
+border-radius: 2%;
+
 }
 
 .display{
 background-color: white;
+
+font-size: 150%;
+border: 1px solid black;
+margin:5px;
 }
 
 .bottom{
@@ -33,15 +43,24 @@ display: flex;
 
 .clearButton{
     flex-grow:1;
+    margin:5px;
 }
 
 .bottomLeftBottom{
 display:flex;
-flex-wrap:wrap;
+flex-direction: column;
+flex-grow: 1;
+}
+
+.numberRow{
+    display: flex;
+    flex-grow: 1;
 }
 
 .numberButton{
     flex-grow: 1;
+    margin:5px;
+    font-size: large;
 }
 
 .bottomRight{
@@ -52,6 +71,7 @@ flex-wrap:wrap;
 .mathButton{
     display:flex;
     flex-grow:1;
+    margin:5px;
 }
 
 .solveButton{
