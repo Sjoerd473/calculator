@@ -14,7 +14,7 @@ let buttonOne = document.getElementById('one');
             displayNumber += '1'
         }
         
-        display.textContent = displayNumber;
+        display.textContent = numberOne + mutator + displayNumber
     })
 
     let buttonTwo = document.getElementById('two');
@@ -24,7 +24,7 @@ let buttonOne = document.getElementById('one');
         } else {
             displayNumber += '2'
         } 
-        display.textContent = displayNumber;
+        display.textContent = numberOne + mutator + displayNumber
     })
 
     let buttonThree = document.getElementById('three');
@@ -34,7 +34,7 @@ let buttonOne = document.getElementById('one');
         } else {
             displayNumber += '3'
         }
-        display.textContent = displayNumber;
+        display.textContent = numberOne + mutator + displayNumber
     })
 
     let buttonFour = document.getElementById('four');
@@ -44,7 +44,7 @@ let buttonOne = document.getElementById('one');
         } else {
             displayNumber += '4'
         } 
-        display.textContent = displayNumber;
+        display.textContent = numberOne + mutator + displayNumber
     })
 
     let buttonFive = document.getElementById('five');
@@ -54,7 +54,7 @@ let buttonOne = document.getElementById('one');
         } else {
             displayNumber += '5'
         }
-        display.textContent = displayNumber;
+        display.textContent = numberOne + mutator + displayNumber
     })
 
     let buttonSix = document.getElementById('six');
@@ -64,7 +64,7 @@ let buttonOne = document.getElementById('one');
         } else {
             displayNumber += '6'
         }
-        display.textContent = displayNumber;
+        display.textContent = numberOne + mutator + displayNumber
     })
 
     let buttonSeven = document.getElementById('seven');
@@ -74,7 +74,7 @@ let buttonOne = document.getElementById('one');
         } else {
             displayNumber += '7'
         }
-        display.textContent = displayNumber;
+        display.textContent = numberOne + mutator + displayNumber
     })
 
     let buttonEight = document.getElementById('eight');
@@ -84,7 +84,7 @@ let buttonOne = document.getElementById('one');
         } else {
             displayNumber += '8'
         }
-        display.textContent = displayNumber;
+        display.textContent = numberOne + mutator + displayNumber
     })
 
     let buttonNine = document.getElementById('nine');
@@ -93,7 +93,7 @@ let buttonOne = document.getElementById('one');
             displayNumber = 9
         } else {
             displayNumber += '9'
-        }display.textContent = displayNumber;
+        }display.textContent = numberOne + mutator + displayNumber
     })
 
     let buttonZero = document.getElementById('zero');
@@ -102,19 +102,19 @@ let buttonOne = document.getElementById('one');
             displayNumber = '0'
         } else {
             displayNumber += '0'
-        } display.textContent = displayNumber;
+        } display.textContent = numberOne + mutator + displayNumber
     })
 
     /*let buttonComma = document.getElementById('comma');
     buttonComma.addEventListener('click',() => {
         displayNumber += ','
-        display.textContent = displayNumber;
+        display.textContent = numberOne + mutator + displayNumber
     }) */ //needs to check for the presence of another comma
 
     let buttonClear = document.getElementById('clear');
     buttonClear.addEventListener('click', () =>{
         displayNumber = '0'
-        display.textContent = displayNumber;
+        display.textContent = numberOne + mutator + displayNumber
     })
 
     let buttonClearAll = document.getElementById('clearAll');
@@ -123,11 +123,29 @@ let buttonOne = document.getElementById('one');
         numberOne = '';
         numberTwo= '';
         mutator = '';
-        display.textContent = displayNumber;
+        display.textContent = numberOne + mutator + displayNumber
     })
 
 
-    
+    let buttonPlus = document.getElementById('plus');
+    buttonPlus.addEventListener('click', () =>{
+        if(mutator.length === 0){
+            numberOne = Number(displayNumber);
+            mutator = '+'
+            displayNumber = ''
+            display.textContent = numberOne + mutator + displayNumber
+        } else {
+            numberTwo = Number(displayNumber);
+            numberOne = calculate(numberOne, numberTwo, mutator);
+            mutator = '+'
+            numberTwo = ''
+            displayNumber = ''
+            display.textContent = numberOne + mutator + displayNumber
+
+            
+
+        }
+    })
 
 /*.addEventListener('click',() => {
     calculate(numberOne,numberTwo,mutator)
