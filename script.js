@@ -131,7 +131,7 @@ let buttonNine = document.getElementById('nine');
 buttonNine.addEventListener('click', () => {
     if (mutator === '' && displayNumber === '0'){
         numberOne = ''
-        displayNumber = 9
+        displayNumber = 9   
     }
     
      else if (displayNumber === '0') {
@@ -311,10 +311,25 @@ function equals() {
     }
 }
 
-function makeNegative(){
-console.log('boop')
-}
+/*function makeNegative(){
+    if (displayNumber.includes('-')){
+        displayNumber.slice(0,1);
+        display.textContent = numberOne + mutator + displayNumber
+    } else {
+        '-' + displayNumber;
+        display.textContent = displayNumber
+    }
+} */
 
+    function makeNegative(){
+        if(displayNumber === ''){
+            numberOne *= -1
+            display.textContent = numberOne + mutator + displayNumber
+        } else{
+        displayNumber *= -1
+        display.textContent = numberOne + mutator + displayNumber
+    }
+    };
 function percentage(){
     console.log('what')
 }

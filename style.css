@@ -19,7 +19,7 @@ border-radius: 2%;
 
 .display{
 background-color: white;
-
+text-align: end;
 font-size: 150%;
 border: 1px solid black;
 margin:5px;
