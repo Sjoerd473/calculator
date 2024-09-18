@@ -6,6 +6,15 @@ let toggle
 
 let display = document.querySelector('.display');
 
+window.addEventListener('keydown', pressButton);
+
+function pressButton(e){
+    const button = document.querySelector(`button[data-key="${e.keyCode}"]`);
+    if(!button) return;
+    button.click()
+    
+}
+
 //could also be in a loop?
 let buttonOne = document.getElementById('one');
 buttonOne.addEventListener('click', () => {
@@ -477,11 +486,3 @@ function calculate(firstNumber, secondNumber, operator) {
     }
 }
 
-window.addEventListener('keydown', pressButton);
-
-function pressButton(e){
-    const button = document.querySelector(`button[data-key="${e.keyCode}"]`);
-    if(!button) return;
-    button.click()
-    
-}
