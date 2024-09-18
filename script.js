@@ -253,10 +253,20 @@ let buttonComma = document.getElementById('comma');
 buttonComma.addEventListener('click', addComma)
 
 
-let buttonClear = document.getElementById('clear');
+let buttonClear = document.getElementById('clear'); 
 buttonClear.addEventListener('click', () => {
-    displayNumber = '0'
-    display.textContent = numberOne + mutator + displayNumber
+    if (displayNumber === ''){
+        if (numberOne.length > 1){
+            numberOne = numberOne.slice(0, numberOne.length - 1)
+            display.textContent = numberOne + mutator + displayNumber
+        }
+    } else {
+        if (displayNumber.length > 1){
+            displayNumber = displayNumber.slice(0, displayNumber.length - 1);
+            display.textContent = numberOne + mutator + displayNumber
+        }
+    }
+   
 })
 
 let buttonClearAll = document.getElementById('clearAll');
