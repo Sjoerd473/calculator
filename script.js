@@ -8,7 +8,12 @@ let display = document.querySelector('.display');
 //could also be in a loop?
 let buttonOne = document.getElementById('one');
 buttonOne.addEventListener('click', () => {
-    if (displayNumber === '0') {
+    if (mutator === '' && displayNumber === '0'){
+        numberOne = ''
+        displayNumber = 1
+    }
+    
+     else if (displayNumber === '0') {
         displayNumber = 1
     } else {
         displayNumber += '1'
@@ -19,7 +24,12 @@ buttonOne.addEventListener('click', () => {
 
 let buttonTwo = document.getElementById('two');
 buttonTwo.addEventListener('click', () => {
-    if (displayNumber === '0') {
+    if (mutator === '' && displayNumber === '0'){
+        numberOne = ''
+        displayNumber = 2
+    }
+    
+     else if (displayNumber === '0') {
         displayNumber = 2
     } else {
         displayNumber += '2'
@@ -29,7 +39,12 @@ buttonTwo.addEventListener('click', () => {
 
 let buttonThree = document.getElementById('three');
 buttonThree.addEventListener('click', () => {
-    if (displayNumber === '0') {
+    if (mutator === '' && displayNumber === '0'){
+        numberOne = ''
+        displayNumber = 3
+    }
+    
+     else if (displayNumber === '0') {
         displayNumber = 3
     } else {
         displayNumber += '3'
@@ -39,7 +54,12 @@ buttonThree.addEventListener('click', () => {
 
 let buttonFour = document.getElementById('four');
 buttonFour.addEventListener('click', () => {
-    if (displayNumber === '0') {
+    if (mutator === '' && displayNumber === '0'){
+        numberOne = ''
+        displayNumber = 4
+    }
+    
+     else if (displayNumber === '0') {
         displayNumber = 4
     } else {
         displayNumber += '4'
@@ -49,7 +69,12 @@ buttonFour.addEventListener('click', () => {
 
 let buttonFive = document.getElementById('five');
 buttonFive.addEventListener('click', () => {
-    if (displayNumber === '0') {
+    if (mutator === '' && displayNumber === '0'){
+        numberOne = ''
+        displayNumber = 5
+    }
+    
+     else if (displayNumber === '0') {
         displayNumber = 5
     } else {
         displayNumber += '5'
@@ -59,7 +84,12 @@ buttonFive.addEventListener('click', () => {
 
 let buttonSix = document.getElementById('six');
 buttonSix.addEventListener('click', () => {
-    if (displayNumber === '0') {
+    if (mutator === '' && displayNumber === '0'){
+        numberOne = ''
+        displayNumber = 6
+    }
+    
+     else if (displayNumber === '0') {
         displayNumber = 6
     } else {
         displayNumber += '6'
@@ -69,7 +99,12 @@ buttonSix.addEventListener('click', () => {
 
 let buttonSeven = document.getElementById('seven');
 buttonSeven.addEventListener('click', () => {
-    if (displayNumber === '0') {
+    if (mutator === '' && displayNumber === '0'){
+        numberOne = ''
+        displayNumber = 7
+    }
+    
+     else if (displayNumber === '0') {
         displayNumber = 7
     } else {
         displayNumber += '7'
@@ -79,7 +114,12 @@ buttonSeven.addEventListener('click', () => {
 
 let buttonEight = document.getElementById('eight');
 buttonEight.addEventListener('click', () => {
-    if (displayNumber === '0') {
+    if (mutator === '' && displayNumber === '0'){
+        numberOne = ''
+        displayNumber = 8
+    }
+    
+     else if (displayNumber === '0') {
         displayNumber = 8
     } else {
         displayNumber += '8'
@@ -89,7 +129,12 @@ buttonEight.addEventListener('click', () => {
 
 let buttonNine = document.getElementById('nine');
 buttonNine.addEventListener('click', () => {
-    if (displayNumber === '0') {
+    if (mutator === '' && displayNumber === '0'){
+        numberOne = ''
+        displayNumber = 9
+    }
+    
+     else if (displayNumber === '0') {
         displayNumber = 9
     } else {
         displayNumber += '9'
@@ -98,7 +143,12 @@ buttonNine.addEventListener('click', () => {
 
 let buttonZero = document.getElementById('zero');
 buttonZero.addEventListener('click', () => {
-    if (displayNumber === '0') {
+    if (mutator === ''){
+        numberOne = ''
+        displayNumber += '0'
+    }
+    
+     else if (displayNumber === '0') {
         displayNumber = '0'
     } else {
         displayNumber += '0'
@@ -142,6 +192,13 @@ buttonMultiply.addEventListener('click', multiplication);
 let buttonEqual = document.getElementById('equals')
 buttonEqual.addEventListener('click', equals);
 
+let buttonNegative = document.getElementById('negative');
+buttonNegative.addEventListener('click',makeNegative);
+
+let buttonPercent = document.getElementById('percent');
+buttonPercent.addEventListener('click', percentage);
+//can also be changed to only show displayNumber
+//might work better if wanting to add features like +/-, comma, and percentage
 function adding() {
     if (mutator.length === 0 && displayNumber.length === 0) {
         mutator = '+'
@@ -252,6 +309,14 @@ function equals() {
 
 
     }
+}
+
+function makeNegative(){
+console.log('boop')
+}
+
+function percentage(){
+    console.log('what')
 }
 
 /*.addEventListener('click',() => {
