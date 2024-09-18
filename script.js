@@ -457,24 +457,31 @@ function addComma() {
 }
 
 
-/*.addEventListener('click',() => {
-    calculate(numberOne,numberTwo,mutator)
-}); */
+//return .toFixed()?
 function calculate(firstNumber, secondNumber, operator) {
     if (!secondNumber) return firstNumber;
     toggle = false
     const effect = operator;
     switch (effect) {
         case '+':
-            return (Number(Number(firstNumber) + Number(secondNumber))).toFixed(5).toString();
+            return (Number(Number(firstNumber) + Number(secondNumber))).toString();
 
         case '-':
-            return (Number(Number(firstNumber) - Number(secondNumber))).toFixed(5).toString();
+            return (Number(Number(firstNumber) - Number(secondNumber))).toString();
 
         case '*':
-            return (Number(Number(firstNumber) * Number(secondNumber))).toFixed(5).toString();
+            return (Number(Number(firstNumber) * Number(secondNumber))).toString();
 
         case '/':
-            return (Number(Number(firstNumber) / Number(secondNumber))).toFixed(5).toString();
+            return (Number(Number(firstNumber) / Number(secondNumber))).toString();
     }
+}
+
+window.addEventListener('keydown', pressButton);
+
+function pressButton(e){
+    const button = document.querySelector(`button[data-key="${e.keyCode}"]`);
+    if(!button) return;
+    button.click()
+    
 }
