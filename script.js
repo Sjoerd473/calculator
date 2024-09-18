@@ -2,21 +2,31 @@ let numberOne = '';
 let numberTwo = '';
 let displayNumber = '';
 let mutator = '';
+let toggle
 
 let display = document.querySelector('.display');
 
 //could also be in a loop?
 let buttonOne = document.getElementById('one');
 buttonOne.addEventListener('click', () => {
-    if (mutator === '' && displayNumber === '0'){
+    if (mutator === '' && displayNumber === '0') { //overwrites a zero in the display that resulted from an equasion
         numberOne = ''
-        displayNumber = 1
+        displayNumber = '1'
+
+    } else if (toggle && mutator === '') //lets you add numbers after clicking percentage or comma
+    {
+        numberOne += '1'
+
+    } else if (mutator === '' && numberOne.length > 0) { //overwrites the result from a previous equasion
+        numberOne = '';
+        displayNumber = '1'
     }
-    
-     else if (displayNumber === '0') {
-        displayNumber = 1
-    } else {
+    else if (displayNumber === '0') { //overwrites a zero in the display
+        displayNumber = '1'
+
+    } else { //adds the number to the display
         displayNumber += '1'
+
     }
 
     display.textContent = numberOne + mutator + displayNumber
@@ -24,142 +34,224 @@ buttonOne.addEventListener('click', () => {
 
 let buttonTwo = document.getElementById('two');
 buttonTwo.addEventListener('click', () => {
-    if (mutator === '' && displayNumber === '0'){
+    if (mutator === '' && displayNumber === '0') { 
         numberOne = ''
-        displayNumber = 2
+        displayNumber = '2'
+
+    } else if (toggle && mutator === '') 
+    {
+        numberOne += '2'
+
+    } else if (mutator === '' && numberOne.length > 0) { 
+        numberOne = '';
+        displayNumber = '2'
     }
-    
-     else if (displayNumber === '0') {
-        displayNumber = 2
-    } else {
+    else if (displayNumber === '0') { 
+        displayNumber = '2'
+
+    } else { 
         displayNumber += '2'
+
     }
     display.textContent = numberOne + mutator + displayNumber
 })
 
 let buttonThree = document.getElementById('three');
 buttonThree.addEventListener('click', () => {
-    if (mutator === '' && displayNumber === '0'){
+    if (mutator === '' && displayNumber === '0') { 
         numberOne = ''
-        displayNumber = 3
+        displayNumber = '3'
+
+    } else if (toggle && mutator === '') 
+    {
+        numberOne += '3'
+
+    } else if (mutator === '' && numberOne.length > 0) { 
+        numberOne = '';
+        displayNumber = '3'
     }
-    
-     else if (displayNumber === '0') {
-        displayNumber = 3
-    } else {
+    else if (displayNumber === '0') { 
+        displayNumber = '3'
+
+    } else { 
         displayNumber += '3'
+
     }
     display.textContent = numberOne + mutator + displayNumber
 })
 
 let buttonFour = document.getElementById('four');
 buttonFour.addEventListener('click', () => {
-    if (mutator === '' && displayNumber === '0'){
+    if (mutator === '' && displayNumber === '0') { 
         numberOne = ''
-        displayNumber = 4
+        displayNumber = '4'
+
+    } else if (toggle && mutator === '') 
+    {
+        numberOne += '4'
+
+    } else if (mutator === '' && numberOne.length > 0) { 
+        numberOne = '';
+        displayNumber = '4'
     }
-    
-     else if (displayNumber === '0') {
-        displayNumber = 4
-    } else {
+    else if (displayNumber === '0') { 
+        displayNumber = '4'
+
+    } else { 
         displayNumber += '4'
+
     }
     display.textContent = numberOne + mutator + displayNumber
 })
 
 let buttonFive = document.getElementById('five');
 buttonFive.addEventListener('click', () => {
-    if (mutator === '' && displayNumber === '0'){
+    if (mutator === '' && displayNumber === '0') { 
         numberOne = ''
-        displayNumber = 5
+        displayNumber = '5'
+
+    } else if (toggle && mutator === '') 
+    {
+        numberOne += '5'
+
+    } else if (mutator === '' && numberOne.length > 0) { 
+        numberOne = '';
+        displayNumber = '5'
     }
-    
-     else if (displayNumber === '0') {
-        displayNumber = 5
-    } else {
+    else if (displayNumber === '0') { 
+        displayNumber = '5'
+
+    } else { 
         displayNumber += '5'
+
     }
     display.textContent = numberOne + mutator + displayNumber
 })
 
 let buttonSix = document.getElementById('six');
 buttonSix.addEventListener('click', () => {
-    if (mutator === '' && displayNumber === '0'){
+    if (mutator === '' && displayNumber === '0') { 
         numberOne = ''
-        displayNumber = 6
+        displayNumber = '6'
+
+    } else if (toggle && mutator === '') 
+    {
+        numberOne += '6'
+
+    } else if (mutator === '' && numberOne.length > 0) { 
+        numberOne = '';
+        displayNumber = '6'
     }
-    
-     else if (displayNumber === '0') {
-        displayNumber = 6
-    } else {
+    else if (displayNumber === '0') { 
+        displayNumber = '6'
+
+    } else { 
         displayNumber += '6'
+
     }
     display.textContent = numberOne + mutator + displayNumber
 })
+    
 
 let buttonSeven = document.getElementById('seven');
 buttonSeven.addEventListener('click', () => {
-    if (mutator === '' && displayNumber === '0'){
+    if (mutator === '' && displayNumber === '0') { 
         numberOne = ''
-        displayNumber = 7
+        displayNumber = '7'
+
+    } else if (toggle && mutator === '') 
+    {
+        numberOne += '7'
+
+    } else if (mutator === '' && numberOne.length > 0) { 
+        numberOne = '';
+        displayNumber = '7'
     }
-    
-     else if (displayNumber === '0') {
-        displayNumber = 7
-    } else {
+    else if (displayNumber === '0') { 
+        displayNumber = '7'
+
+    } else { 
         displayNumber += '7'
+
     }
     display.textContent = numberOne + mutator + displayNumber
 })
 
 let buttonEight = document.getElementById('eight');
 buttonEight.addEventListener('click', () => {
-    if (mutator === '' && displayNumber === '0'){
+    if (mutator === '' && displayNumber === '0') { 
         numberOne = ''
-        displayNumber = 8
+        displayNumber = '8'
+
+    } else if (toggle && mutator === '') 
+    {
+        numberOne += '8'
+
+    } else if (mutator === '' && numberOne.length > 0) { 
+        numberOne = '';
+        displayNumber = '8'
     }
-    
-     else if (displayNumber === '0') {
-        displayNumber = 8
-    } else {
+    else if (displayNumber === '0') { 
+        displayNumber = '8'
+
+    } else { 
         displayNumber += '8'
+
     }
     display.textContent = numberOne + mutator + displayNumber
 })
 
 let buttonNine = document.getElementById('nine');
 buttonNine.addEventListener('click', () => {
-    if (mutator === '' && displayNumber === '0'){
+    if (mutator === '' && displayNumber === '0') { 
         numberOne = ''
-        displayNumber = 9   
+        displayNumber = '9'
+
+    } else if (toggle && mutator === '') 
+    {
+        numberOne += '9'
+
+    } else if (mutator === '' && numberOne.length > 0) { 
+        numberOne = '';
+        displayNumber = '9'
     }
-    
-     else if (displayNumber === '0') {
-        displayNumber = 9
-    } else {
+    else if (displayNumber === '0') { 
+        displayNumber = '9'
+
+    } else { 
         displayNumber += '9'
-    } display.textContent = numberOne + mutator + displayNumber
+
+    }
+    display.textContent = numberOne + mutator + displayNumber
 })
 
 let buttonZero = document.getElementById('zero');
 buttonZero.addEventListener('click', () => {
-    if (mutator === ''){
+    if (mutator === '' && displayNumber === '0') { 
         numberOne = ''
-        displayNumber += '0'
-    }
-    
-     else if (displayNumber === '0') {
         displayNumber = '0'
-    } else {
+
+    } else if (toggle && mutator === '') 
+    {
+        numberOne += '0'
+
+    } else if (mutator === '' && numberOne.length > 0) { 
+        numberOne = '';
+        displayNumber = '0'
+    }
+    else if (displayNumber === '0') { 
+        displayNumber = '0'
+
+    } else { 
         displayNumber += '0'
-    } display.textContent = numberOne + mutator + displayNumber
+
+    }
+    display.textContent = numberOne + mutator + displayNumber
 })
 
-/*let buttonComma = document.getElementById('comma');
-buttonComma.addEventListener('click',() => {
-    displayNumber += ','
-    display.textContent = numberOne + mutator + displayNumber
-}) */ //needs to check for the presence of another comma
+let buttonComma = document.getElementById('comma');
+buttonComma.addEventListener('click', addComma)
+
 
 let buttonClear = document.getElementById('clear');
 buttonClear.addEventListener('click', () => {
@@ -193,7 +285,7 @@ let buttonEqual = document.getElementById('equals')
 buttonEqual.addEventListener('click', equals);
 
 let buttonNegative = document.getElementById('negative');
-buttonNegative.addEventListener('click',makeNegative);
+buttonNegative.addEventListener('click', makeNegative);
 
 let buttonPercent = document.getElementById('percent');
 buttonPercent.addEventListener('click', percentage);
@@ -232,6 +324,7 @@ function subtraction() {
     } else {
         numberTwo = Number(displayNumber);
         numberOne = calculate(numberOne, numberTwo, mutator);
+
         mutator = '-'
         numberTwo = ''
         displayNumber = ''
@@ -253,7 +346,7 @@ function division() {
         display.textContent = numberOne + mutator + displayNumber
     } else {
         numberTwo = Number(displayNumber);
-       
+
         if (numberTwo === 0 || numberOne === 0) {
             display.textContent = 'Stop it'
             displayNumber = '';
@@ -261,16 +354,16 @@ function division() {
             numberTwo = '';
             mutator = '';
         } else {
-        numberOne = calculate(numberOne, numberTwo, mutator);
-        mutator = '/'
-        numberTwo = ''
-        displayNumber = ''
-        display.textContent = numberOne + mutator + displayNumber
+            numberOne = calculate(numberOne, numberTwo, mutator);
+            mutator = '/'
+            numberTwo = ''
+            displayNumber = ''
+            display.textContent = numberOne + mutator + displayNumber
 
 
 
+        }
     }
-}
 }
 
 function multiplication() {
@@ -311,36 +404,47 @@ function equals() {
     }
 }
 
-/*function makeNegative(){
-    if (displayNumber.includes('-')){
-        displayNumber.slice(0,1);
+
+function makeNegative() {
+    if (displayNumber === 0) return;
+    else if (displayNumber === '') {
+        numberOne *= -1
         display.textContent = numberOne + mutator + displayNumber
     } else {
-        '-' + displayNumber;
-        display.textContent = displayNumber
-    }
-} */
-
-    function makeNegative(){
-        if (displayNumber == 0) return;
-        else if(displayNumber === ''){
-            numberOne *= -1
-            display.textContent = numberOne + mutator + displayNumber
-        } else{
         displayNumber *= -1
         display.textContent = numberOne + mutator + displayNumber
     }
-    };
-function percentage(){
-    if (displayNumber == 0) return;
-    else if(displayNumber === ''){
+};
+function percentage() {
+    if (displayNumber === 0) return;
+    else if (displayNumber === '') {
+        toggle = true
         numberOne /= 100
         display.textContent = numberOne + mutator + displayNumber
-    } else{
-    displayNumber /= 100
-    display.textContent = numberOne + mutator + displayNumber
-}
+
+    } else {
+        displayNumber /= 100
+        display.textContent = numberOne + mutator + displayNumber
+    }
 };
+
+function addComma() {
+    if (displayNumber.toString().includes('.')) {
+        return;
+
+    }
+    else if (numberOne.toString().includes('.')) {
+        return;
+
+    } else if (numberOne.length > 0) {
+        toggle = true
+        numberOne += '.'
+        display.textContent = numberOne + mutator + displayNumber
+    } else {
+        displayNumber += '.'
+        display.textContent = numberOne + mutator + displayNumber
+    }
+}
 
 
 /*.addEventListener('click',() => {
@@ -348,19 +452,19 @@ function percentage(){
 }); */
 function calculate(firstNumber, secondNumber, operator) {
     if (!secondNumber) return firstNumber;
-
+    toggle = false
     const effect = operator;
     switch (effect) {
         case '+':
-            return firstNumber + secondNumber;
+            return (Number(firstNumber) + Number(secondNumber)).toString();
 
         case '-':
-            return firstNumber - secondNumber;
+            return (Number(firstNumber) - Number(secondNumber)).toString();
 
         case '*':
-            return firstNumber * secondNumber;
+            return (Number(firstNumber) * Number(secondNumber)).toString();
 
         case '/':
-            return firstNumber / secondNumber;
+            return (Number(firstNumber) / Number(secondNumber)).toString();
     }
 }
