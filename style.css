@@ -1,28 +1,41 @@
-:root   {
+*  {
     box-sizing: border-box;
     padding: 0;
     margin: 0;
+    font-family: 'Orbitron', sans-serif;
 }
 body {
     display:flex;
     justify-content: center;
+    
+    
+}
+
+button{
+    border-radius: 5%;
 }
 
 .calcBody {
+    margin-top: 50px;
 display:flex;
 flex-direction: column;
 width: 25vw;
 height: 50vh;
 border-radius: 2%;
+border: 1px solid black;
+padding:5px;
+background-color: hsla(111, 63%, 16%, 1)
 
 }
 
 .display{
-background-color: white;
+background-color: rgb(207, 196, 130);
 text-align: end;
 font-size: 150%;
 border: 1px solid black;
 margin:5px;
+padding-right:3px;
+
 }
 
 .bottom{
@@ -43,7 +56,12 @@ display: flex;
 
 .clearButton{
     flex-grow:1;
-    margin:5px;
+    margin:1px;
+    min-height: 30px;
+   
+}
+#negative, #percentage{
+font-size: 20px;
 }
 
 .bottomLeftBottom{
@@ -59,8 +77,15 @@ flex-grow: 1;
 
 .numberButton{
     flex-grow: 1;
-    margin:5px;
+    margin:1px;
     font-size: large;
+    color:white;
+   background-color: hsla(276, 63%, 16%, 1);
+   font-size: 45px;
+}
+
+.numberButton:hover{
+    background-color: hsla(276, 63%, 36%, 1);
 }
 
 .bottomRight{
@@ -69,9 +94,28 @@ flex-grow: 1;
 }
 
 .mathButton{
-    display:flex;
+    
     flex-grow:1;
-    margin:5px;
+    margin:1px;
+    text-align:center;
+    font-size:30px;
+    
+    min-width: 25px;
+}
+
+#equals{
+    background-color: hsla(0, 100%, 50%, 1);
+}
+#equals:hover{
+    background-color: hsla(0, 85%, 50%, 1);;
+}
+
+.mathButton, .clearButton{
+    background-color: hsla(19, 100%, 50%, 1);
+}
+
+.mathButton:hover, .clearButton:hover{
+    background-color: hsla(25, 100%, 50%, 1);
 }
 
 .solveButton{

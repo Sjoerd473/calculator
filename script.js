@@ -466,15 +466,15 @@ function calculate(firstNumber, secondNumber, operator) {
     const effect = operator;
     switch (effect) {
         case '+':
-            return (Number(firstNumber) + Number(secondNumber)).toString();
+            return (Number(Number(firstNumber) + Number(secondNumber))).toFixed(5).toString();
 
         case '-':
-            return (Number(firstNumber) - Number(secondNumber)).toString();
+            return (Number(Number(firstNumber) - Number(secondNumber))).toFixed(5).toString();
 
         case '*':
-            return (Number(firstNumber) * Number(secondNumber)).toString();
+            return (Number(Number(firstNumber) * Number(secondNumber))).toFixed(5).toString();
 
         case '/':
-            return (Number(firstNumber) / Number(secondNumber)).toString();
+            return (Number(Number(firstNumber) / Number(secondNumber))).toFixed(5).toString();
     }
 }
