@@ -322,7 +322,8 @@ function equals() {
 } */
 
     function makeNegative(){
-        if(displayNumber === ''){
+        if (displayNumber == 0) return;
+        else if(displayNumber === ''){
             numberOne *= -1
             display.textContent = numberOne + mutator + displayNumber
         } else{
@@ -331,8 +332,16 @@ function equals() {
     }
     };
 function percentage(){
-    console.log('what')
+    if (displayNumber == 0) return;
+    else if(displayNumber === ''){
+        numberOne /= 100
+        display.textContent = numberOne + mutator + displayNumber
+    } else{
+    displayNumber /= 100
+    display.textContent = numberOne + mutator + displayNumber
 }
+};
+
 
 /*.addEventListener('click',() => {
     calculate(numberOne,numberTwo,mutator)
